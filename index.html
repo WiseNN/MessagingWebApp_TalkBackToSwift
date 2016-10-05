@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+        
+
+     
+    
+<script src="https://www.gstatic.com/firebasejs/3.2.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase-database.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyDzS6NzC4d3M077i-5aIBOPQacbcb6-1qs",
+    authDomain: "swiftchatproj.firebaseapp.com",
+    databaseURL: "https://swiftchatproj.firebaseio.com",
+    storageBucket: "swiftchatproj.appspot.com",
+  };
+    
+  var fireRef = firebase.initializeApp(config);
+    
+</script>
+    
+<script   src="https://code.jquery.com/jquery-3.1.0.min.js"   integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="   crossorigin="anonymous"></script>  
+<script src="MessagingAppScript.js"></script>
+    
+<link rel= 'stylesheet' href="MessagingApp.css">
+<!--    <link rel= 'stylesheet' href="MessagingAppMobile.css">-->
+<link rel= 'stylesheet' href="https://cdn.rawgit.com/WiseNN/myGridRep/master/myStaticGrid2.css">
+    
+    
+    <title>MessagingApp</title>
+    
+</head>
+<body>
+
+	<div class = "msgContainer col-4">  
+        <div id="msgScreen">
+            <dl class = "allMessages">
+                <dt class="leftUserContainer">
+                    <div class="circleFacePlate leftPlate">
+<!--                        NW-->
+                    </div>
+                    <p class="leftMsg">
+<!--                            leftUserMessage-->
+                    </p>
+                        
+                </dt>
+                <dt class = "rightUserContainer">
+                    <p class="rightMsg">
+<!--                            rightUserMessage-->
+                    </p>
+                    <div class="circleFacePlate rightPlate">
+<!--                        SRL-->
+                    </div>
+                </dt>
+            </dl>
+            
+        </div>
+        
+        
+        <textarea class = "textAreaClass" id = "textAreaId">
+        </textarea>
+        <button id="sendButton" type="submit" value="Submit" >
+            Send
+        </button>
+            
+            
+		</div>
+	<div class = "textFieldContainer">
+		</div>
+    
+    
+    
+</body>
+</html>
