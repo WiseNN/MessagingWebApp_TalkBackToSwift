@@ -24,7 +24,16 @@ console.log("ref2: "+ref);
 $ (document).ready(function main(msg){
     "use strict";
     console.log("ready!");
-    debugger;
+    
+    
+var elem = document.getElementById("myBod");
+if (document.body.requestFullscreen) {
+document.body.requestFullscreen();
+} else if (document.body.mozRequestFullScreen) {
+document.body.mozRequestFullScreen();
+} else if (document.body.webkitRequestFullscreen) {
+document.body.webkitRequestFullscreen();
+}
     
 //    firebase.on("child_added", function(snapshot, prevChildKey) {
 //     
@@ -173,6 +182,9 @@ document.getElementById("textAreaId").addEventListener("keypress", function(e){
         {
            
             var message = document.getElementById("textAreaId").value;
+
+            if(message.keyCode !== 32){
+                return;}
             postMessage(message);
             document.getElementById("textAreaId").value = "";   
         }
@@ -181,17 +193,18 @@ document.getElementById("textAreaId").addEventListener("keypress", function(e){
     
     document.getElementById("sendButton").addEventListener("click", function(){
         
-        
-        
         var message = document.getElementById("textAreaId").value;
+        if(message === ""){return;}
         postMessage(message);
         document.getElementById("textAreaId").value = "";
     });
-    
-    
+
+
     loadDatabase();
     
 });
+
+
 
 
 
